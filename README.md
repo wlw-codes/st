@@ -1,0 +1,7 @@
+# st
+
+This is my personal build of [st](https://st.suckless.org) by the guys over at suckless.org.
+
+## patches
+- alpha to support transparency
+
