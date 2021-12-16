@@ -7,7 +7,7 @@
  */
 //static char *font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true";
 static char *font = "hack:size=12";
-static char *font2[] = { "hack:size=12", "fontawesome:size=12" };
+static char *font2[] = { "fontawesome:size=12" };
 static int borderpx = 2;
 
 /*
@@ -101,38 +101,35 @@ float alpha = 0.9;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	[0] = "#000000",
-	[1] = "#ff5555",
-	[2] = "#50fa7b",
-	[3] = "#f1fa8c",
-	[4] = "#bd93f9",
-	[5] = "#ff79c6",
-	[6] = "#8be9fd",
-	[7] = "#bbbbbb",
-
+	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	[1] = "#cc241d", /* red     */
+	[2] = "#98971a", /* green   */
+	[3] = "#d79921", /* yellow  */
+	[4] = "#458588", /* blue    */
+	[5] = "#b16286", /* magenta */
+	[6] = "#689d6a", /* cyan    */
+	[7] = "#a89984", /* white   */
+	
 	/* 8 bright colors */
-	[8] = "gray50",
-	[9] = "red",
-	[10] = "green",
-	[11] = "yellow",
-	[12] = "#5c5cff",
-	[13] = "magenta",
-	[14] = "#eb7ace",
-	[15] = "white",
-
-	/* special colors */
-	[256] = "#1a1b1d", /* #282a36 */
-	[257] = "#fce1be", /* #f8f8f2 */
+	[8]  = "#928374", /* black   */
+	[9]  = "#fb4934", /* red     */
+	[10] = "#b8bb26", /* green   */
+	[11] = "#fabd2f", /* yellow  */
+	[12] = "#83a598", /* blue    */
+	[13] = "#d3869b", /* magenta */
+	[14] = "#8ec07c", /* cyan    */
+	[15] = "#ebdbb2", /* white   */
 };
+
 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 257;
  /*
 + * Colors used, when the specific fg == defaultfg. So in reverse mode this
