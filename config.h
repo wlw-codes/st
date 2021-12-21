@@ -6,8 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true";
-static char *font = "hack:size=12";
-static char *font2[] = { "fontawesome:size=12" };
+static char *font = "Hack:size=12";
+static char *font2[] = { "FontAwesome 5 Free:style=Solid:pixelsize=12" };
 static int borderpx = 2;
 
 /*
